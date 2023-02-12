@@ -1,0 +1,35 @@
+import pygame
+
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+
+pygame.init()
+window = pygame.display.set_mode((700, 500))
+picture = transform.scale(image.load('winter_night.jpg'))
+pygame.display.set_caption('Лучшая игра')
+window.fill('BLACK')
+
+class Area:
+    def __init__(self, x=0, y=0, width=10, height=10, color=None):
+        self.rect = pygame.Rect(x, y, width, height)
+        self.fill_color = color
+
+def fill(self):
+    pygame.draw.rect(window, self.fill_color, self.rect)
+
+
+
+class Label(Area):
+    
+running = True
+while running:
+    time.delay(40)
+    window.blit(picture, (0, 0))
+for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+        running = False
+    window.update()
+
